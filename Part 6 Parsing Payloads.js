@@ -41,6 +41,11 @@ const queryStringObject = parseUrl.query
 const decoder = new StringDecoder("utf-8")
 var buffer = ""
 
+
+//The on method binds an event to a object.
+// this on method is used below(i.e req.on())
+//It is a way to express your intent if there is something happening (data sent or error in your case) , then execute the function added as a parameter.
+//This style of programming is called Event-driven programming. 
 req.on("data",function(data){
     buffer += decoder.write(data)
 
