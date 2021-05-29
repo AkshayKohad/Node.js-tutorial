@@ -1,3 +1,6 @@
+// Note one thing that like we do localhost:3000 for making local server on web browser, simply putting localhost:3000 
+// but if we want to access it not terminal itself we do curl localhost:3000
+
 /*
 * Primary file for the API
 *
