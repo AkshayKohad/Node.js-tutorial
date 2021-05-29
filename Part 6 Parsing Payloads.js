@@ -46,13 +46,18 @@ var buffer = ""
 // this on method is used below(i.e req.on())
 //It is a way to express your intent if there is something happening (data sent or error in your case) , then execute the function added as a parameter.
 //This style of programming is called Event-driven programming. 
+
 req.on("data",function(data){
     buffer += decoder.write(data)
 
 })
 
+  
+//We first get the data by listening to the stream data events, and when the data ends, the stream end event is called
+  
 req.on("end",function(){
     buffer += decoder.end()
+  
 // even though you have any payload or not this function will always execute 
 //so let us keep below to line in this function itself rather than outside the function
     //send the response
