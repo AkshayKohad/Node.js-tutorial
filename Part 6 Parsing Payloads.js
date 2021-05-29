@@ -47,6 +47,8 @@ var buffer = ""
 //It is a way to express your intent if there is something happening (data sent or error in your case) , then execute the function added as a parameter.
 //This style of programming is called Event-driven programming. 
 
+// https://nodejs.org/api/stream.html#stream_event_data
+
 req.on("data",function(data){
     buffer += decoder.write(data)
 
